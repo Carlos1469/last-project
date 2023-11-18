@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div.background {
+    background-image: url(assets/body.jpg);
+    background-position: center;
+    /* width: 1280px; */
+    padding-top: 20px;
+    justify-content: center;
+    /* align-items: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 515px;
+}
+div.logo {
+    width: 190px;
+    height: 50px;
+    margin-left: 80px;
+    position: absolute;
+    border-radius: 20%;
+    background-image: url(assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul{
+    margin-left: 400px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 24px;
+    text-shadow: 2px 2px 10px lightblue;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-weight: bold;
+}
+li a:hover {
+    color: lightgray;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 20px;
+    /* width: 1280px; */
+    margin-left: 0px;
+    /* padding-right: 330px; */
+    position: relative;
+    height: 80px;
+    background-color: rgb(31, 31, 31);
+}
+div.menu-icon {
+    display: none;
+    width: 50px;
+    margin: 0px auto;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+div.menu-icon > span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto;
+}
+@media screen and (max-width: 972px) {
+    ul {
+        position: absolute;
+        /* margin-right: 330px; */
+        right: 0px;
+        top: 80px;
+        background-color: rgb(31, 31, 31);
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding-top: 50px;
+        gap: 50px;
+        display: none;
+    }
+    ul.show {
+        display: flex;
+    }
+    ul li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul li a {
+        display: block;
+        color: black;
+        background-color: rgb(244, 244, 244);
+        font-size: 24px;
+        border-bottom: 1px solid black;
+    }
+    li a:hover{
+        color: gray;
+        font-size: 28px;
+    }
+    ul li a::before {
+        content: "⚫";
+    }
+    div.menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+}
+div.background div.title {
+    text-shadow: 5px 5px 20px gold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    width: 300px;
+    /* margin-top: 20px; */
+    height: 80px;
+    margin-left: 550px;
+    justify-content: center;
+    /* margin-top: 20px; */
+    align-items: center;
+    margin-bottom: 30px;
+}
+div.container {
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
+    align-items: center;
+    /* background-color: salmon; */
+    height: 350px;
+    /* width: 1000px; */
+    /* background-color: blue; */
+}
+div.barat {
+    margin-right: 50px;
+    margin-bottom: 100px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+div.timur {
+    margin-bottom: 100px;
+    /* margin-right: 50px; */
+}
+div.tengah {
+    margin-right: 50px;
+    margin-top: 100px;
+}
+div.barat div.gambar {
+    background-image: url(assets/indonesia\ bagian\ barat.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+    margin-left: 90px;
+    width: 200px;
+    height: 150px;
+}
+div.tengah div.gambar {
+    background-image: url(assets/indonesia\ bagian\ tengah.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 320px;
+    margin-bottom: 15px;
+    margin-left: 90px;
+    width: 200px;
+    height: 150px;
+}
+div.timur div.gambar {
+    background-image: url(assets/indonesia\ bagian\ timur.jpg);
+    background-position: center;
+    margin-bottom: 15px;
+    margin-left: 90px;
+    background-repeat: no-repeat;
+    background-size: 320px;
+    width: 200px;
+    height: 150px;
+}
+div.container a {
+    text-decoration: none;
+    font-weight: bold;
+    /* background-color: salmon; */
+    color: black;
+    text-shadow: 3px 3px 15px gold;
+    font-size: 18px;
+}
+div.barat a:hover {
+    font-size: 20px;
+    color: rgb(96, 95, 95);
+}
+div.tengah a:hover {
+    font-size: 20px;
+    color: rgb(96, 96, 96);
+}
+div.timur a:hover {
+    font-size: 20px;
+    color: rgb(96, 96, 96);
+}
+div.timur button {
+    width: 300px;
+    margin-left: 40px;
+    height: 50px;
+    border: 2px solid black;
+}
+div.barat button {
+    width: 300px;
+    margin-left: 40px;
+    height: 50px;
+    border: 2px solid black; 
+}
+div.tengah button {
+    width: 300px;
+    margin-left: 40px;
+    height: 50px;
+    border: 2px solid black;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="ok">
+            <div class="logo"></div>
+            <ul id="menu">
+                <li>
+                    <a href="ProjectTerakhir.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="background">
+        <div class="title">
+            <h1>Wilayah</h1>
+        </div>
+        <div class="container">
+            <div class="barat">
+                <div class="gambar"></div>
+                <button><a href="makanan_barat.html">Makanan-makanan Khas Di Indonesia Bagian Barat</a></button>
+            </div>
+            <div class="tengah">
+                <div class="gambar"></div>
+                <button><a href="makanan_tengah.html">Makanan-makanan Khas Di Indonesia Bagian Tengah</a></button>
+            </div>
+            <div class="timur">
+                <div class="gambar"></div>
+                <button><a href="makanan_timur.html">Makanan-makanan Khas Di Indonesia Bagian Timur</a></button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+    <script>
+        if (!localStorage.getItem("show"))
+        localStorage.setItem("show", false);
+        showInfo = JSON.parse(localStorage.getItem("show"));
+
+        if (showInfo){
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        document.querySelector(".menu-icon").addEventListener('click', () => {
+            document.getElementById("menu").classList.toggle("show");
+            showInfo = !showInfo
+            localStorage.setItem("show", showInfo);
+        })
+</script>
+</html>

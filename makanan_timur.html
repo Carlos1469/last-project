@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(assets/body.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.logo {
+    width: 190px;
+    height: 50px;
+    margin-left: 80px;
+    position: absolute;
+    border-radius: 20%;
+    background-image: url(assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul{
+    margin-left: 400px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    text-shadow: 2px 2px 10px lightblue;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-weight: bold;
+}
+li a:hover {
+    color: lightgray;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    height: 80px;
+    background-color: rgb(31, 31, 31);
+}
+div.menu-icon {
+    display: none;
+    width: 50px;
+    margin: 0px auto;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+div.menu-icon > span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto;
+}
+@media screen and (max-width: 972px) {
+    ul {
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        background-color: rgb(31, 31, 31);
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding-top: 50px;
+        gap: 50px;
+        display: none;
+    }
+    ul.show {
+        display: flex;
+    }
+    ul li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul li a {
+        display: block;
+        color: black;
+        background-color: rgb(244, 244, 244);
+        font-size: 24px;
+        border-bottom: 1px solid black;
+    }
+    li a:hover{
+        color: gray;
+        font-size: 28px;
+    }
+    ul li a::before {
+        content: "⚫";
+    }
+    div.menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+}
+div.papua {
+    margin-bottom: 100px;
+}
+div.title {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.title-1 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.one div.gambar {
+    background-image: url(assets/makanan\ papua\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.two div.gambar {
+    background-image: url(assets/makanan\ papua\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+
+div.papua div.three{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.papua div.three div.gambar {
+    background-image: url(assets/makanan\ papua\ 3.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.papua div.three div.isi{
+    width:800px;
+    margin-top: 0px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.papua div.three div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.papua div.four{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.papua div.four div.gambar {
+    background-image: url(assets/makanan\ papua\ 4.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.papua div.four div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.papua div.four div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.maluku {
+    margin-bottom: 100px;
+}
+div.maluku div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.maluku div.title-2 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.maluku div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.maluku div.one div.gambar {
+    background-image: url(assets/makanan\ maluku\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.maluku div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.maluku div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.maluku div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.maluku div.two div.gambar {
+    background-image: url(assets/makanan\ maluku\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.maluku div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.maluku div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+
+div.maluku div.three{
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.maluku div.three div.gambar {
+    background-image: url(assets/makanan\ maluku\ 3.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.maluku div.three div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.maluku div.four{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.maluku div.four div.gambar {
+    background-image: url(assets/makanan\ maluku\ 4.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.maluku div.four div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.maluku div.four div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="ok">
+            <div class="logo"></div>
+            <ul id="menu">
+                <li>
+                    <a href="ProjectTerakhir.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <h1>Makanan-makanan Khas Di Indonesia Bagian Timur</h1>
+    </div>
+    <div class="papua">
+        <div class="title-1">
+            <h1>Papua</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Papeda adalah makanan khas Papua berupa bubur berwarna putih bening dan bertekstur lengket. Rasanya yang cenderung tawar membuat papeda cocok disantap bersama ikan kuah kuning.Cara membuat papeda Papua sendiri mudah dan sederhana. Cukup dengan mencampurkan tepung sagu, bumbu, dan air, lalu dimasak.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Udang selingkuh merupakan makanan favorit di Papua yang kerap disajikan dengan saus tiram, saus padang, dan mentega.Daging udangnya padat tapi terasa lembut dan manis. Konon dinamakan udang selingkuh karena spesies udang di Papua yang satu ini memiliki capit yang besar menyerupai kepiting sehingga seolah-olah hasil persilangan antara udang dan kepiting.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+            <div class="three">
+                <div class="gambar"></div>
+                <div class="isi">
+                    <h3>Makanan ini mudah ditemukan di warung-warung makan di Papua. Ikan bakar ini tidak jauh berbeda dengan ikan bakar pada umumnya. Namun, bumbu dan sambalnya memiliki cita rasa yang berbeda karena hanya bisa ditemukan di Papua. Ikan yang dipakai untuk masakan ini biasanya adalah ikan tongkol. Setelah selesai dibakar, ikannya lalu dilumuri dengan sambal khas yang digiling dan disajikan mentah.</h3>
+                </div>
+            </div>
+            <div class="four">
+                <div class="isi">
+                    <h3>Aunu Senebre merupakan hidangan yang berasal dari teri dan nasi yang digoreng. Setelahnya dikukus bersama rajangan daun talas dan parutan kelapa sehingga memiliki tekstur yang tidak kering. Di Papua, Aunu Senebre ini kerap disantap bersama Papeda.</h3>
+                </div>
+                <div class="gambar"></div>
+                </div>
+        </div>
+    </div>
+    <div class="maluku">
+        <div class="title-2">
+            <h1>Maluku</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Ikan kuah pala banda merupakan makanan khas Maluku,makanan ini menggunakan bahan dasar ikan kerapu atau ikan kakap. Berbagai bumbu digunakan, seperti merica, pala, dan jenis rempah lainnya. Rasanya asam berkolaborasi dengan rasa pedas. Makanan khas Maluku ini makin nikmat disantap bersama nasi, ulang-ulang, dan sambal bekasang
+                </h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Nasi lapola adalah makanan khas Maluku yang menjadi makanan pokok sebagian masyarakatnya. Bahan dasarnya adalah beras, parutan kelapa muda, dan kacang tolo. Makanan khas Maluku ini disantap berbarengan dengan lauk, seperti kohu-kohu (olahan ikan teri atau tongkol basah), dan lalapan mentah.
+                </h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+            <div class="three">
+                <div class="gambar"></div>
+                <div class="isi">
+                <h3>Ikan bakar dabu-dabu adalah makanan khas Maluku yang saat ini sangat populer di lidah masyarakat Indonesia. Rasanya yang asam dan pedas, membuat orang jatuh cinta, bahkan sejak saat pertama kali menikmatinya.Satu hal yang membuat ikan bakar ini sangat menggugah selera adalah karena siraman sambal dabu-dabunya.</h3>
+            </div>
+            </div>
+            <div class="four">
+                <div class="isi">
+                <h3>Makanan khas Maluku ini terbuat dari bahan dasar beras ketan dan santan yang diisi ke dalam batang bambu lalu di bakar. Sebelumnya, bagian dalam batang bambu dilapisi dulu dengan daun pisang agar nantinya nasi jaha mudah di keluarkan. Rasa lezat yang dimiliki nasi jaha berasal dari bumbu-bumbu rempah yang digunakan.</h3>
+            </div>
+            <div class="gambar"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        if (!localStorage.getItem("show"))
+        localStorage.setItem("show", false);
+        showInfo = JSON.parse(localStorage.getItem("show"));
+
+        if (showInfo){
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        document.querySelector(".menu-icon").addEventListener('click', () => {
+            document.getElementById("menu").classList.toggle("show");
+            showInfo = !showInfo
+            localStorage.setItem("show", showInfo);
+        })
+</script>
+</html>

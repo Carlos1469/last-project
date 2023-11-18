@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div.container {
+    background-image: url(assets/body.jpg);
+    background-position: center;
+    padding-top: 20px;
+    height: 570px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.logo {
+    width: 210px;
+    height: 60px;
+    margin-left: 90px;
+    position: fixed;
+    border-radius: 20%;
+    background-image: url(assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul{
+    margin-left: 450px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    text-shadow: 2px 2px 10px lightblue;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-weight: bold;
+}
+li a:hover {
+    color: lightgray;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    height: 90px;
+    background-color: rgb(31, 31, 31);
+}
+div.menu-icon {
+    display: none;
+    width: 50px;
+    margin: 0px auto;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+div.menu-icon > span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto;
+}
+@media screen and (max-width: 1028px) {
+    div.background {
+        height: 700px;
+    }
+    
+}
+@media screen and (max-width: 972px) {
+    ul {
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        background-color: rgb(31, 31, 31);
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding-top: 50px;
+        gap: 50px;
+        display: none;
+    }
+    ul.show {
+        display: flex;
+    }
+    ul li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul li a {
+        display: block;
+        color: black;
+        background-color: rgb(244, 244, 244);
+        font-size: 24px;
+        border-bottom: 1px solid black;
+    }
+    li a:hover{
+        color: gray;
+        font-size: 28px;
+    }
+    ul li a::before {
+        content: "⚫";
+    }
+    div.menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+}
+div.title {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    /* background-color: saddlebrown; */
+    height: 80px;
+    margin-left: 350px;
+    font-size: 35px;
+    /* margin-top: 20px; */
+}
+div.isi{
+    display: flex;
+    /* background-color: blue; */
+    /* width: 1280px; */
+    margin-left: 80px;
+    height: 280px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+div.telepon div.gambar {
+    background-image: url(assets/telepon.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    margin-left: 95px;
+    margin-bottom: 15px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+div.telepon {
+    margin-left: 70px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+div.telepon h1 {
+    text-align: center;
+}
+div.telepon p {
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+div.masalah {
+    /* background-color: slateblue; */
+    color: white;
+    margin-top: 10px;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+div.masalah div.gambar {
+    background-image: url(assets/gambar\ email.png);
+    background-position: center;
+    background-size: cover;
+    margin-left: 200px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+div.masalah h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+div.masalah h4 {
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+div.masalah button a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+div.masalah button {
+    margin-top: 10px;
+    width: 300px;
+    height: 40px;
+    border: 2px solid black;
+}
+div.masalah button a:hover {
+    font-size: 15px;
+    color: grey;
+}
+div.chat {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 45px;
+    text-align: center;
+    margin-right: 70px;
+}
+div.chat div.gambar {
+    background-image: url(assets/gambar\ chat.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin-top: 0px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 105px;
+    margin-bottom: 15px;
+}
+div.chat h1 {
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+div.chat button {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    border: 2px solid black;
+}
+div.chat button a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+div.chat button a:hover {
+    font-size: 20px;
+    color: grey;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="ok">
+            <div class="logo"></div>
+            <ul id="menu">
+                <li>
+                    <a href="ProjectTerakhir.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">
+            <h1 style="text-shadow: 5px 5px 15px gold;">Contact Us</h1>
+        </div>
+        <div class="isi">
+            <div class="telepon">
+                <div class="gambar"></div>
+                <h1 style="text-shadow: 2px 2px 15px gold;">BY PHONE</h1>
+                <p>(Senin s.d. Sabtu, 08.00 s.d. 17.00 WIB)</p>
+                <div class="wilayah">
+                    <h4>Jakarta, Indonesia Tidak Memungut Biaya:</h4>
+                    <h4>0711-222-999</h4>
+                </div>
+            </div>
+            <div class="masalah">
+                <div class="gambar"></div>
+                <h1 style="text-shadow: 2px 2px 15px gold;">BERIKAN PERTANYAAN DAN MASUKAN</h1>
+                <h4>Kirimkan saja pertanyaan dan masukan yang ada, kami pasti akan membalasnya</h4>
+                <button><a href="#">Ingin Memberikan Masukan Dan Pertanyaan</a></button>
+            </div>
+            <div class="chat">
+                <div class="gambar"></div>
+                <h1 style="text-shadow: 2px 2px 15px gold;">CHAT</h1>
+                <h4>Mengobrol dengan anggota tim internal kami</h4>
+                <button><a href="#">Mulai Chat</a></button>
+            </div>
+    </div>
+    </div>
+    
+</body>
+    <script>
+        if (!localStorage.getItem("show"))
+        localStorage.setItem("show", false);
+        showInfo = JSON.parse(localStorage.getItem("show"));
+
+        if (showInfo){
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        document.querySelector(".menu-icon").addEventListener('click', () => {
+            document.getElementById("menu").classList.toggle("show");
+            showInfo = !showInfo
+            localStorage.setItem("show", showInfo);
+        })
+</script>
+</html>

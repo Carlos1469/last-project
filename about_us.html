@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div.background {
+    background-image: url(assets/body.jpg);
+    background-position: center;
+    padding-top: 20px;
+    height: 580px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.logo {
+    width: 190px;
+    height: 50px;
+    margin-left: 80px;
+    position: absolute;
+    border-radius: 20%;
+    background-image: url(assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul{
+    margin-left: 400px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    text-shadow: 2px 2px 10px lightblue;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-weight: bold;
+}
+li a:hover {
+    color: lightgray;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    height: 80px;
+    background-color: rgb(31, 31, 31);
+}
+div.menu-icon {
+    display: none;
+    width: 50px;
+    margin: 0px auto;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+div.menu-icon > span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto;
+}
+@media screen and (max-width: 1028px) {
+    div.background {
+        height: 800px;
+    }
+    
+}
+@media screen and (max-width: 972px) {
+    ul {
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        background-color: rgb(31, 31, 31);
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding-top: 50px;
+        gap: 50px;
+        display: none;
+    }
+    ul.show {
+        display: flex;
+    }
+    ul li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul li a {
+        display: block;
+        color: black;
+        background-color: rgb(244, 244, 244);
+        font-size: 24px;
+        border-bottom: 1px solid black;
+    }
+    li a:hover{
+        color: gray;
+        font-size: 28px;
+    }
+    ul li a::before {
+        content: "⚫";
+    }
+    div.menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+}
+div.container {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    /* background-color: blue; */
+}
+div.title {
+    font-size: 30px;
+    /* margin-top: 20px; */
+    color: white;
+    width: 300px;
+    height: 80px;
+    margin-left: 500px;
+    text-align: center;
+    text-shadow: 5px 5px 20px gold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.isi{
+    width: 700px;
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+    font-weight: bold;
+    /* background-color: salmon; */
+    height: 300px;
+}
+div.isi h4 {
+    text-shadow: 3px 3px 15px lightcyan;
+}
+div.logo-1 {
+    width: 400px;
+    height: 350px;
+    margin-right: 80px;
+    margin-bottom: 5px;
+    background-image: url(assets/logo\ besar.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="ok">
+            <div class="logo"></div>
+            <ul id="menu">
+                <li>
+                    <a href="ProjectTerakhir.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="background">
+        <div class="title">
+            <h1>About Us</h1>
+        </div>
+        <div class="container">
+            <div class="isi">
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa rerum quia deleniti ut sunt quo optio earum eum, ipsum provident eos doloribus voluptas, debitis ab dolores molestiae aut maxime doloremque odit sit. Accusantium doloremque commodi esse reiciendis similique nam pariatur harum eaque magni itaque dicta consequatur odit nesciunt tempore nisi blanditiis nihil consequuntur in natus omnis fugiat quos, beatae nobis! Doloremque dolorum quidem voluptatum exercitationem tempore maxime voluptas molestias. Voluptates, quae fuga! Corporis nihil consectetur illo, quo, quis aspernatur dolore praesentium corrupti placeat molestias eligendi dolores consequatur voluptatem quaerat perferendis, aliquid fugit maiores earum! Reiciendis dolorem vel illo est tempore. Vero consectetur pariatur nulla ab natus, dolore a atque commodi est nisi harum deserunt quisquam, praesentium veritatis quod ducimus? Sapiente accusamus tempora dignissimos quas repudiandae blanditiis eum natus, molestias possimus nam doloremque minima nisi aut ipsum distinctio laudantium nulla. Consectetur quod excepturi rerum. Officiis veritatis dolore porro consequuntur non magni, distinctio recusandae in nobis reprehenderit aut quia dolorum repudiandae! Voluptas dolore, ut magni libero aliquam aut ad ratione. Repudiandae possimus sapiente consequatur tempore at cum, iusto eligendi? Ratione alias nihil, quibusdam praesentium placeat neque. Quod amet laudantium molestias natus? Impedit culpa quasi quos temporibus amet tenetur officiis voluptates quo modi?</h4>
+            </div>
+            <div class="logo-1"></div>
+        </div>
+    </div>
+</body>
+    <script>
+        if (!localStorage.getItem("show"))
+        localStorage.setItem("show", false);
+        showInfo = JSON.parse(localStorage.getItem("show"));
+
+        if (showInfo){
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        document.querySelector(".menu-icon").addEventListener('click', () => {
+            document.getElementById("menu").classList.toggle("show");
+            showInfo = !showInfo
+            localStorage.setItem("show", showInfo);
+        })
+</script>
+</html>

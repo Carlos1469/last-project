@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(assets/body.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.logo {
+    width: 190px;
+    height: 50px;
+    margin-left: 80px;
+    position: absolute;
+    border-radius: 20%;
+    background-image: url(assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul{
+    margin-left: 400px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    text-shadow: 2px 2px 10px lightblue;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-weight: bold;
+}
+li a:hover {
+    color: lightgray;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    height: 80px;
+    background-color: rgb(31, 31, 31);
+}
+div.menu-icon {
+    display: none;
+    width: 50px;
+    margin: 0px auto;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+div.menu-icon > span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto;
+}
+@media screen and (max-width: 972px) {
+    ul {
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        background-color: rgb(31, 31, 31);
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding-top: 50px;
+        gap: 50px;
+        display: none;
+    }
+    ul.show {
+        display: flex;
+    }
+    ul li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul li a {
+        display: block;
+        color: black;
+        background-color: rgb(244, 244, 244);
+        font-size: 24px;
+        border-bottom: 1px solid black;
+    }
+    li a:hover{
+        color: gray;
+        font-size: 28px;
+    }
+    ul li a::before {
+        content: "⚫";
+    }
+    div.menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+}
+div.palembang {
+    margin-bottom: 100px;
+}
+div.title {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.title-1 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.one div.gambar {
+    background-image: url(assets/makanan\ palembang\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.two div.gambar {
+    background-image: url(assets/makanan\ palembang\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.aceh {
+    margin-bottom: 100px;
+}
+div.aceh div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.aceh div.title-2 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.aceh div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.aceh div.one div.gambar {
+    background-image: url(assets/makanan\ aceh\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.aceh div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.aceh div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.aceh div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.aceh div.two div.gambar {
+    background-image: url(assets/makanan\ aceh\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.aceh div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.aceh div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.bali {
+    margin-bottom: 100px;
+}
+div.bali div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.bali div.title-3 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.bali div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.bali div.one div.gambar {
+    background-image: url(assets/makanan\ bali\ 1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.bali div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.bali div.one div.isi {
+    margin-bottom: 20px;
+}
+div.bali div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.bali div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.bali div.two div.isi {
+    margin-bottom: 20px;
+}
+div.bali div.two div.gambar {
+    background-image: url(assets/makanan\ bali\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.bali div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.bali div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.yogyakarta {
+    margin-bottom: 100px;
+}
+div.yogyakarta div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.yogyakarta div.title-4 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.yogyakarta div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.yogyakarta div.one div.gambar {
+    background-image: url(assets/makanan\ yogyakarta\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.yogyakarta div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.yogyakarta div.one div.isi {
+    margin-bottom: 20px;
+}
+div.yogyakarta div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.yogyakarta div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.yogyakarta div.two div.isi {
+    margin-bottom: 20px;
+}
+div.yogyakarta div.two div.gambar {
+    background-image: url(assets/makanan\ yogyakarta\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.yogyakarta div.two div.isi{
+    width: 800px;
+    margin-top: 30px;
+    height: 100px;
+}
+div.yogyakarta div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.lampung {
+    margin-bottom: 100px;
+}
+div.lampung div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.lampung div.title-5 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.lampung div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.lampung div.one div.gambar {
+    background-image: url(assets/makanan\ lampung\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.lampung div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.lampung div.one div.isi {
+    margin-bottom: 20px;
+}
+div.lampung div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.lampung div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.lampung div.two div.isi {
+    margin-bottom: 20px;
+}
+div.lampung div.two div.gambar {
+    background-image: url(assets/makanan\ lampung\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.lampung div.two div.isi{
+    width: 800px;
+    margin-top: 30px;
+    height: 100px;
+}
+div.lampung div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.riau {
+    margin-bottom: 100px;
+}
+div.riau div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.riau div.title-6 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.riau div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.riau div.one div.gambar {
+    background-image: url(assets/makanan\ riau\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.riau div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.riau div.one div.isi {
+    margin-bottom: 20px;
+}
+div.riau div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.riau div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.riau div.two div.isi {
+    margin-bottom: 20px;
+}
+div.riau div.two div.gambar {
+    background-image: url(assets/makanan\ riau\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.riau div.two div.isi{
+    width: 800px;
+    margin-top: 30px;
+    height: 100px;
+}
+div.riau div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.banten {
+    margin-bottom: 80px;
+}
+div.banten div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.banten div.title-7 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.banten div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.banten div.one div.gambar {
+    background-image: url(assets/makanan\ riau\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.banten div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.banten div.one div.isi {
+    margin-bottom: 20px;
+}
+div.banten div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.banten div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.banten div.two div.isi {
+    margin-bottom: 20px;
+}
+div.banten div.two div.gambar {
+    background-image: url(assets/makanan\ riau\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.banten div.two div.isi{
+    width: 800px;
+    margin-top: 30px;
+    height: 100px;
+}
+div.banten div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="ok">
+            <div class="logo"></div>
+            <ul id="menu">
+                <li>
+                    <a href="ProjectTerakhir.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <h1>Makanan-makanan Khas Di Indonesia Bagian Barat</h1>
+    </div>
+    <div class="palembang">
+        <div class="title-1">
+            <h1>Palembang</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Pempek adalah hidangan khas Palembang, Sumatra Selatan, Indonesia. Hidangan ini terkenal karena adonan ikan yang kenyal dan dipadu dengan kuah cuko yang khas.Berikut adalah beberapa jenis pempek khas Palembang: Pempek Kapal Selam, Pempek Adaan, Pempek Lenjer, Pempek Kulit, Pempek Pistel</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Mie Celor adalah hidangan mie yang disajikan dengan kuah kental khas Palembang yang terbuat dari santan, kuah rebusan udang, bumbu-bumbu rempah, dan beberapa bahan lainnya.Mie Celor memiliki cita rasa yang lezat dan unik, menciptakan pengalaman kuliner yang khas dari daerah Palembang. Jangan ragu untuk mencoba hidangan ini jika Anda memiliki kesempatan untuk berkunjung ke Palembang atau mencari restoran Indonesia yang menyajikan hidangan ini.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="aceh">
+        <div class="title-2">
+            <h1>Aceh</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Mie Aceh adalah hidangan mie pedas yang berasal dari Provinsi Aceh, Indonesia. Hidangan ini terkenal dengan kuahnya yang kaya rempah dan pedas.Mie Aceh merupakan salah satu hidangan yang penuh dengan cita rasa khas Aceh dan menjadi favorit bagi pecinta masakan pedas.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Makanan khas Aceh ini dapat ditemui secara mudah di warung-warung Aceh.Kuah Asam Keueng ini merupakan masakan ikan.Biasanya orang-orang Aceh menggunaan ikan tongkol, lele atau lainnya, yang diolah dengan rasa khas Asam Keueng.Asam yang digunakan adalah asam sunti, yaitu asam yang dibuat dair buah belimbing wuluh yang sudah dikeringkan.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bali">
+        <div class="title-3">
+            <h1>Bali</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Ayam Betutu adalah hidangan tradisional Bali, Indonesia, yang terkenal dengan cita rasa kaya rempah-rempah dan proses memasaknya yang cukup unik.Ayam Betutu sering disajikan sebagai hidangan istimewa dalam acara-acara khusus seperti upacara adat, pernikahan, atau saat perayaan Hindu tertentu di Bali. Hidangan ini mencerminkan kekayaan rempah-rempah dan kebudayaan Bali.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Sate Lilit adalah hidangan khas Bali yang terkenal dengan cara pembuatannya yang unik. Nama "lilit" berasal dari Bahasa Indonesia yang berarti melilit, mengacu pada cara pembentukan sate ini.Sate Lilit umumnya disajikan dengan saus kacang atau saus sambal matah, dan kadang-kadang disajikan bersama dengan nasi putih atau lontong. Hidangan ini populer di Bali dan menjadi pilihan yang lezat selama acara-acara khusus atau sebagai hidangan pembuka dalam makanan berat.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="yogyakarta">
+        <div class="title-4">
+            <h1>DI Yogyakarta</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Mie lethek merupakan mie khas Jogja yang berbahan dasar tepung tapioka dan gaplek. Nama lethek diambil dari tampilan mie ini yang cenderung kusam karena hanya terbuat dari bahan alami tanpa bahan kimia seperti pemutih dan pengawet.Hidangan ini menjadi salah satu kuliner yang khas dan berbeda dari Yogyakarta, dan sering dijajakan di warung-warung atau rumah makan tradisional di daerah tersebut.
+                </h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Salah satu makanan khas Jogja adalah gudeg. Kuliner ini terbuat dari nangka muda yang dimasak dalam santan. Gudeg biasa dipadukan dengan nasi, daging ayam, telur rebus, tahu, dan krecek.Gudeg dapat dinikmati dalam berbagai tingkatan kepedasan, tergantung pada selera masing-masing orang.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lampung">
+        <div class="title-5">
+            <h1>Lampung</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Seruit adalah makanan khas daerah Lampung, Indonesia, yaitu masakan ikan yang digoreng atau dibakar dicampur sambal terasi, tempoyak (olahan durian) atau mangga. Jenis ikan adalah besarnya ikan sungai seperti belide, baung, layis dll, ditambah lalapan.Seruit biasanya disajikan dengan nasi hangat. Hidangan ini cocok dinikmati sebagai makanan utama karena ikan dan bumbu-bumbunya menciptakan rasa yang lezat dan beragam.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>SEKUBAL adalah salah satu makanan khas kota Lampung. Sekubal menjadi menu Lebaran khas Lampung yang menjadi favorit masyarakat di sana.Kue Sekubal memiliki citarasa gurih, yang berasal dari santan sebagai bahan campuran dalam mengolah makanan khas satu ini. Selain itu, kue sekubal ini juga sangat cocok disajikan bersama dengan lauk rendang, gulai, hingga sambal sebagai hidangan utama dalam sebuah jamuan makan.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="riau">
+        <div class="title-6">
+            <h1>Kepulauan Riau</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Sup Tunjang adalah hidangan khas Riau, Indonesia. Tunjang adalah bagian kikil sapi yang biasanya digunakan dalam hidangan ini.Proses memasak Sup Tunjang melibatkan perebusan tunjang dengan rempah-rempah hingga tunjang empuk dan meresap rasa rempah. Hidangan ini sering disajikan sebagai makanan hangat yang cocok dinikmati pada hari-hari yang sejuk.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Mie Sagu adalah hidangan khas Riau yang terbuat dari sagu, tepung yang diperoleh dari pohon sagu atau rumbia. Mie ini memiliki tekstur yang kenyal dan biasanya digunakan dalam berbagai hidangan tradisional di daerah Riau.Mie sagu dapat disajikan dalam berbagai hidangan, seperti dalam sup, tumis, atau dalam bentuk mi goreng. Rasanya yang kenyal dan lembut menjadikan mie sagu pilihan yang menarik dalam berbagai hidangan kuliner tradisional Riau.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="banten">
+        <div class="title-7">
+            <h1>Banten</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Pecak Bandeng adalah hidangan khas Riau yang terbuat dari ikan bandeng yang diolah dengan bumbu dan bumbu khas daerah tersebut.Pecak Bandeng menjadi salah satu hidangan yang populer di Riau dan mencerminkan keanekaragaman kuliner Indonesia, khususnya dalam penggunaan ikan lokal dan bumbu-bumbu tradisional.
+                </h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Rabeg adalah masakan berkuah dari olahan daging kambing (kadang campur jeroan).Karena sejarahnya masakan ini merupakan replikasi dari masakan di pelabuhan laut merah sana, maka rempah-rempah cukup dominan dalam setiap sendok kuah yang kita makan.Kuah Rabeg cukup enteng karena tidak mengikutsertakan santan  didalamnya.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        if (!localStorage.getItem("show"))
+        localStorage.setItem("show", false);
+        showInfo = JSON.parse(localStorage.getItem("show"));
+
+        if (showInfo){
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        document.querySelector(".menu-icon").addEventListener('click', () => {
+            document.getElementById("menu").classList.toggle("show");
+            showInfo = !showInfo
+            localStorage.setItem("show", showInfo);
+        })
+</script>
+</html>

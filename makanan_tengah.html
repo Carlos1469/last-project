@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(assets/body.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.logo {
+    width: 190px;
+    height: 50px;
+    margin-left: 80px;
+    position: absolute;
+    border-radius: 20%;
+    background-image: url(assets/logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul{
+    margin-left: 400px;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 30px;
+    text-shadow: 2px 2px 10px lightblue;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-weight: bold;
+}
+li a:hover {
+    color: lightgray;
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    height: 80px;
+    background-color: rgb(31, 31, 31);
+}
+div.menu-icon {
+    display: none;
+    width: 50px;
+    margin: 0px auto;
+    height: 50px;
+    /* border: 1px solid black; */
+}
+div.menu-icon > span{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 8px auto;
+}
+@media screen and (max-width: 972px) {
+    ul {
+        position: absolute;
+        right: 0px;
+        top: 80px;
+        background-color: rgb(31, 31, 31);
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        padding-top: 50px;
+        gap: 50px;
+        display: none;
+    }
+    ul.show {
+        display: flex;
+    }
+    ul li {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul li a {
+        display: block;
+        color: black;
+        background-color: rgb(244, 244, 244);
+        font-size: 24px;
+        border-bottom: 1px solid black;
+    }
+    li a:hover{
+        color: gray;
+        font-size: 28px;
+    }
+    ul li a::before {
+        content: "⚫";
+    }
+    div.menu-icon {
+        display: block;
+        margin-right: 0px;
+    }
+}
+div.kaltim {
+    margin-bottom: 100px;
+}
+div.title {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.title-1 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.one div.gambar {
+    background-image: url(assets/makanan\ samarinda\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.two div.gambar {
+    background-image: url(assets/makanan\ samarinda\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 30px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.kutai {
+    margin-bottom: 100px;
+}
+div.kutai div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.kutai div.title-2 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.kutai div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.kutai div.one div.gambar {
+    background-image: url(assets/makanan\ kutai\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.kutai div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.kutai div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.kutai div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.kutai div.two div.gambar {
+    background-image: url(assets/makanan\ kutai\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.kutai div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 10px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.kutai div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.lombok {
+    margin-bottom: 100px;
+}
+div.lombok div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.lombok div.title-3 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.lombok div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.lombok div.one div.gambar {
+    background-image: url(assets/makanan\ lombok\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.lombok div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.lombok div.one div.isi {
+    margin-bottom: 20px;
+}
+div.lombok div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.lombok div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.lombok div.two div.isi {
+    margin-bottom: 20px;
+}
+div.lombok div.two div.gambar {
+    background-image: url(assets/makanan\ lombok\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.lombok div.two div.isi{
+    width: 800px;
+    /* background-color: salmon; */
+    margin-top: 30px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.lombok div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.ntt {
+    margin-bottom: 100px;
+}
+div.ntt div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.ntt div.title-4 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.ntt div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.ntt div.one div.gambar {
+    background-image: url(assets/makanan\ sumba\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.ntt div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.ntt div.one div.isi {
+    margin-bottom: 20px;
+}
+div.ntt div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.ntt div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.ntt div.two div.isi {
+    margin-bottom: 20px;
+}
+div.ntt div.two div.gambar {
+    background-image: url(assets/makanan\ sumba\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.ntt div.two div.isi{
+    width: 800px;
+    margin-top: 30px;
+    height: 100px;
+}
+div.ntt div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.makasar {
+    margin-bottom: 100px;
+}
+div.makasar div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.makasar div.title-5 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.makasar div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.makasar div.one div.gambar {
+    background-image: url(assets/makanan\ makasar\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.makasar div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.makasar div.one div.isi {
+    margin-bottom: 20px;
+}
+div.makasar div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.makasar div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.makasar div.two div.isi {
+    margin-bottom: 20px;
+}
+div.makasar div.two div.gambar {
+    background-image: url(assets/makanan\ makasar\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.makasar div.two div.isi{
+    width: 800px;
+    margin-top: 30px;
+    height: 100px;
+}
+div.makasar div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.manado {
+    margin-bottom: 100px;
+}
+div.manado div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.manado div.title-6 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.manado div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.manado div.one div.gambar {
+    background-image: url(assets/makanan\ manado\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.manado div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.manado div.one div.isi {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+div.manado div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.manado div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.manado div.two div.isi {
+    margin-bottom: 20px;
+}
+div.manado div.two div.gambar {
+    background-image: url(assets/makanan\ manado\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.manado div.two div.isi{
+    width: 800px;
+    margin-top: 50px;
+}
+div.manado div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.mamuju {
+    margin-bottom: 80px;
+}
+div.mamuju div.title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.mamuju div.title-7 {
+    font-size: 30px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 15px gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.mamuju div.one{
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    align-items: center;
+}
+div.mamuju div.one div.gambar {
+    background-image: url(assets/makanan\ mamuju\ 1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.mamuju div.isi{
+    width:800px;
+    margin-top: 20px;
+    /* background-color: salmon; */
+    height: 100px;
+}
+div.mamuju div.one div.isi {
+    margin-bottom: 20px;
+}
+div.mamuju div.one div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+div.mamuju div.two{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+div.mamuju div.two div.isi {
+    margin-bottom: 20px;
+}
+div.mamuju div.two div.gambar {
+    background-image: url(assets/makanan\ mamuju\ 2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    width: 300px;
+    margin-right: 50px;
+    height: 200px;
+    margin-left: 50px;
+    background-size: cover;
+}
+div.mamuju div.two div.isi{
+    width: 800px;
+    margin-top: 50px;
+    height: 100px;
+}
+div.mamuju div.two div.isi h3 {
+    color: white;
+    text-shadow: 5px 5px 15px gray;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="ok">
+            <div class="logo"></div>
+            <ul id="menu">
+                <li>
+                    <a href="ProjectTerakhir.html">Home</a>
+                </li>
+                <li>
+                    <a href="about_us.html">About Us</a>
+                </li>
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <h1>Makanan-makanan Khas Di Indonesia Bagian Tengah</h1>
+    </div>
+    <div class="kaltim">
+        <div class="title-1">
+            <h1>Samarinda</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Pepes Kepiting adalah hidangan tradisional Indonesia yang memiliki banyak variasi, termasuk di daerah Samarinda.Pepes Kepiting adalah hidangan yang penuh dengan rasa, aroma, dan kelezatan. Kombinasi rempah-rempah dan cara tradisional membungkus dan memasaknya memberikan cita rasa yang khas dari masakan Indonesia</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Sate Payau adalah hidangan khas Samarinda. Hidangan ini menggunakan daging rusa sebagai bahan utama sate.Sate payau merupakan makanan yang sangat langka. Sate ini hanya ditemukan pada festival-festival dan upacara-upacara adat.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="kutai">
+        <div class="title-2">
+            <h1>Kutai Kartanegara</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Nasi Bekepor adalah nasi liwet dengan campuran sayur, rempah-rempah, dan potongan ikan asin. Makanan khas Kalimantan Timur satu ini berasal dari Kutai Kartanegara. Menu ini dulu menjadi hidangan untuk para raja Kutai di zaman kerajaan.Tak lengkap rasanya jika menikmati Nasi Bekepor tanpa Sambal Raja, yangg merupakan salah satu sambal legendaris asal Kutai Kartanegara yang biasanya disajikan bersama nasi bekepor.
+                </h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Gence ruan merupakan salah satu masakan rica-rica ikan gabus khas dari Kutai Kartanegara, Kalimantan Timur. Ruan mengacu pada nama ikan yang digunakan, yaitu ikan “Haruan” atau ikan gabus. Sedangkan gence adalah nama dari bumbu atau rempah khas hidangan ini.Masakan ini memiliki cita rasa pedas asam dan manis.Gence ruan biasanya disajikan bersama nasi putih dan olahan tumis sayur pakis.
+                </h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lombok">
+        <div class="title-3">
+            <h1>Lombok</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Nasi Balap Puyung adalah hidangan khas dari Lombok, Nusa Tenggara Barat, Indonesia. Hidangan ini terkenal dengan penyajiannya yang cepat dan unik.Nasi Balap Puyung umumnya disantap saat pagi hari. Nasi Balap Puyung terdiri dari nasi putih, ayam suwir, oseng kacang panjang, kacang kedelai atau kadang tanah goreng, keripik kentang.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Ayam Rarang adalah makanan khas dari Lombok, Nusa Tenggara Barat yang terbuat dari ayam kampung yang digoreng terlebih dahulu, kemudian dipanggang. Ayam Rarang biasanya disajikan dengan bumbu sambal dan cabai rawit. Ayam Rarang memiliki cita rasa yang pedas dan gurihnya yang meresap hingga ke daging.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="ntt">
+        <div class="title-4">
+            <h1>Sumba</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Nga’a Watary Patau Kabbe Sumba(Nasi Jagung) adalah hidangan khas Sumba, sebuah pulau di Provinsi Nusa Tenggara Timur, Indonesia. Sumba terkenal dengan nasi jagungnya, yang merupakan variasi nasi yang menggunakan jagung sebagai bahan utama pengganti atau pelengkap beras.Biasanya, Nga’a Watary Patau Kabbe dinikmati bersama sayur-sayuran dan lauk pelengkap lainnya.
+                </h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Ka’pu Pantunnu (Sayur Jantung Pisang) adalah hidangan khas Sumba, sebuah pulau di Provinsi Nusa Tenggara Timur, Indonesia. Hidangan ini mendapatkan namanya dari bahan utamanya, yakni jantung pisang. Cara pengolahannya sederhana, yaitu jantung pisang dibakar kemudian dipotong kecil-kecil lalu ditumis dengan bumbu-bumbu, kelapa parut yang sudah dipanggang, dan daun kemangi.
+                </h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="makasar">
+        <div class="title-5">
+            <h1>Makassar</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Jalangkote adalah salah satu makanan khas Makassar, Sulawesi Selatan, Indonesia. Ini adalah sejenis kue pastel yang terkenal dengan kulitnya yang renyah dan isian yang lezat.Jalangkote memiliki isi wortel dan kentang yang dipotong dadu, tauge, serta laksa yang ditumis dengan menggunakan bawang putih, bawang merah, merica, dan bumbu-bumbu lainnya.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Coto Makassar adalah hidangan khas Makassar, Sulawesi Selatan, Indonesia. Hidangan ini terkenal dengan kuahnya yang kental dan bumbu yang kaya. Isian Coto Makassar berupa daging sapi dan jeroan yang dipotong kecil-kecil dan kuahnya kaya akan rempah dan kental dengan campuran kacang tanah yang telah digiling. Saat dicicipi akan terasa kontur kacang serta rempah yang pekat dan gurih sehingga memberi kenikmatan tersendiri.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="manado">
+        <div class="title-6">
+            <h1>Manado</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Ayam Woku adalah hidangan khas dari Manado, Sulawesi Utara, Indonesia. Hidangan ini terkenal dengan penggunaan bumbu woku yang khas,memberikan cita rasa lezat, gurih, pedas dan wangi. Biasanya ayam woku ini disantap dengan sepiring nasi hangat.</h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Bubur Tinutuan adalah hidangan bubur khas dari Manado, Sulawesi Utara, Indonesia. Bubur Tinutuan adalah hidangan yang kaya akan nutrisi dengan keanekaragaman sayuran yang digunakan. Rasanya yang lezat dan cocok disajikan sebagai sarapan atau makanan hangat di berbagai kesempatan.
+                </h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mamuju">
+        <div class="title-7">
+            <h1>Mamuju</h1>
+        </div>
+        <div class="one">
+            <div class="gambar"></div>
+            <div class="isi">
+                <h3>Kue cucur terbuat dari tepung beras dan gula merah yang terlebih dahulu digoreng menggunakan minyak kelapa khas Mandar. Tepung dalam kue ini biasanya dicampur dengan gula aren yang dihaluskan, lalu kemudian diaduk rata. Adonan kue lalu dimasukkan ke dalam wajan dengan sendok sayur agar menghasilkan bentuk yang bulat.
+                </h3>
+            </div>
+        </div>
+        <div class="two">
+            <div class="isi">
+                <h3>Sambusa merupakan salah satu jajanan yang menjadi menu takjil favorit di Mamuju, Sulawesi Barat. Kue berbentuk segitiga ini sekilas memang mirip dengan samosa yang ada di India dan Pakistan. Isian dari sambusa adalah ikan tuna yang sudah dihaluskan beserta bumbunya ke dalam kulit dan dilipat berbentuk segitiga kemudian digoreng.</h3>
+            </div>
+            <div class="gambar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        if (!localStorage.getItem("show"))
+        localStorage.setItem("show", false);
+        showInfo = JSON.parse(localStorage.getItem("show"));
+
+        if (showInfo){
+            document.getElementById("menu").classList.toggle("show");
+        }
+
+        document.querySelector(".menu-icon").addEventListener('click', () => {
+            document.getElementById("menu").classList.toggle("show");
+            showInfo = !showInfo
+            localStorage.setItem("show", showInfo);
+        })
+</script>
+</html>
